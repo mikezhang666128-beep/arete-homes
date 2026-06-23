@@ -1,0 +1,11 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Arete logo">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#c7ccd1"/>
+      <stop offset="1" stop-color="#7d848b"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 14 L104 104 L78 104 L60 64 L42 104 L16 104 Z" fill="url(#silver)"/>
+  <path d="M60 50 L72 78 L48 78 Z" fill="#0a0a0a"/>
+</svg>
