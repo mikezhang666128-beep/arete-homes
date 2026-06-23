@@ -11,6 +11,7 @@ export default function LeadForm({ id }) {
     phone: "",
     email: "",
     timeline: "ASAP",
+    botcheck: "", // honeypot — humans leave blank
   });
 
   const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
@@ -19,22 +20,32 @@ export default function LeadForm({ id }) {
     e.preventDefault();
     setStatus("sending");
 
-    // If no endpoint is configured yet, we just simulate success so the
-    // demo works. Once you paste a Formspree URL into site.config.js,
-    // real submissions will be emailed to you.
-    if (!site.leadEndpoint) {
-      console.log("LEAD CAPTURED (no endpoint configured):", form);
+    // Until a Web3Forms key is set, fall back to demo success so the page works.
+    if (!site.web3formsKey) {
+      console.log("LEAD CAPTURED (no Web3Forms key configured yet):", form);
       setTimeout(() => setStatus("done"), 600);
       return;
     }
 
     try {
-      const res = await fetch(site.leadEndpoint, {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          access_key: site.web3formsKey,
+          subject: "New cash offer request — Arete Homes website",
+          from_name: "Arete Homes website",
+          replyto: form.email,
+          botcheck: form.botcheck,
+          "Property address": form.address,
+          Name: form.name,
+          Phone: form.phone,
+          Email: form.email,
+          "Selling timeline": form.timeline,
+        }),
       });
-      setStatus(res.ok ? "done" : "error");
+      const data = await res.json();
+      setStatus(data.success ? "done" : "error");
     } catch (err) {
       setStatus("error");
     }
@@ -102,6 +113,17 @@ export default function LeadForm({ id }) {
           <option>Just exploring</option>
         </select>
       </div>
+
+      <input
+        type="text"
+        name="botcheck"
+        value={form.botcheck}
+        onChange={update("botcheck")}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+      />
 
       <button className="btn btn-primary" type="submit" style={{ width: "100%" }} disabled={status === "sending"}>
         {status === "sending" ? "Sending…" : "Get my cash offer"}

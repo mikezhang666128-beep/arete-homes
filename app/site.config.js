@@ -11,9 +11,10 @@ export const site = {
   city: "California",
   // Used for the Google Map embed (no API key needed)
   mapQuery: "301 Bayview Cir #104, Newport Beach, CA 92660",
-  // Where lead form submissions are sent. See README "Connecting the lead form".
-  // Paste your Formspree endpoint here, e.g. "https://formspree.io/f/abcdwxyz"
-  leadEndpoint: "",
+  // Lead delivery via Web3Forms — free, no account, emails each lead to your inbox.
+  // Get a key in 30s at https://web3forms.com using team.aretehomes@gmail.com,
+  // then paste it between the quotes below. No database or backend required.
+  web3formsKey: "",
 };
 
 export const cities = [

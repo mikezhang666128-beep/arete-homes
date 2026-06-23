@@ -154,16 +154,16 @@ export default function Home() {
           </div>
           <div className="gallery">
             <figure>
-              <img src="/home-kitchen.jpg" alt="Modern kitchen interior" />
-              <figcaption>Updated single-family home</figcaption>
+              <img src="/as-is-1.jpg" alt="Dated single-family home bought as-is" />
+              <figcaption>Dated &amp; worn — bought as-is</figcaption>
             </figure>
             <figure>
-              <img src="/home-stairs.jpg" alt="Open staircase and entry" />
-              <figcaption>Multi-level townhome</figcaption>
+              <img src="/as-is-2.jpg" alt="Older home needing major repairs" />
+              <figcaption>Major repairs? No problem</figcaption>
             </figure>
             <figure>
-              <img src="/home-dining.jpg" alt="Bright dining room" />
-              <figcaption>Light-filled family home</figcaption>
+              <img src="/as-is-3.jpg" alt="Vacant home interior mid-renovation" />
+              <figcaption>Vacant &amp; inherited homes</figcaption>
             </figure>
           </div>
         </div>

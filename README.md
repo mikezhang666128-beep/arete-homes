@@ -46,17 +46,17 @@ The logo is `public/logo.svg`. To use the real Arete logo instead, drop a
 
 ## 3. Connecting the lead form (so you actually get the leads)
 
-Right now the form **works as a demo** — it shows a success message and logs the
-lead to the browser console, but doesn't email anyone yet. To receive real
-leads, the easiest no-backend option is **Formspree** (free tier):
+Until a key is set, the form **works as a demo** — it shows a success message but
+doesn't email anyone. To get real leads emailed to you, use **Web3Forms** (free,
+no account, no database):
 
-1. Go to [formspree.io](https://formspree.io), sign up, create a new form.
-2. Copy the form endpoint — it looks like `https://formspree.io/f/abcdwxyz`.
-3. Paste it into `leadEndpoint` in `app/site.config.js`.
+1. Go to [web3forms.com](https://web3forms.com).
+2. Type **team.aretehomes@gmail.com** in the "Create Access Key" box and submit.
+3. Web3Forms emails you an access key (looks like `a1b2c3d4-...`). Copy it.
+4. Paste it into `web3formsKey` in `app/site.config.js` and push.
 
-Done. Submissions now land in your email. (Other options that work the same way:
-Web3Forms, Getform, or a Google Sheet via a script — ask if you want one of
-those instead.)
+Done. Every "Get cash offer" submission now emails that inbox instantly, with the
+property address, name, phone, and timeline. No backend or database needed.
 
 ---
 
@@ -123,7 +123,7 @@ public/
 
 ## Quick checklist before you go live
 - [ ] Set real `email` in `site.config.js`
-- [ ] Add Formspree `leadEndpoint`
+- [ ] Add Web3Forms `web3formsKey` so leads get emailed
 - [ ] Replace the demo disclaimer in the footer (`app/page.js`)
 - [ ] Swap `logo.svg` for the real logo if you have a hi-res file
 - [ ] Buy + connect a domain
