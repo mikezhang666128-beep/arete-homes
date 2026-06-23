@@ -13,8 +13,8 @@ export default function Home() {
           </a>
           <nav className="nav-links">
             <a href="#how">How it works</a>
-            <a href="#buy">What we buy</a>
-            <a href="#compare">Why Arete</a>
+            <a href="#homes">Homes</a>
+            <a href="#area">Where we buy</a>
             <a href="#faq">FAQ</a>
             <a className="btn btn-primary" href="#offer">Get cash offer</a>
           </nav>
@@ -142,6 +142,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Gallery ────────────────────────────── */}
+      <section className="section tight" id="homes">
+        <div className="wrap">
+          <div className="center mb-lg">
+            <div className="eyebrow">Recent homes</div>
+            <h2>The kind of homes we buy</h2>
+            <p className="lead center">
+              Every condition, every neighborhood. Here&apos;s a look at properties like yours.
+            </p>
+          </div>
+          <div className="gallery">
+            <figure>
+              <img src="/home-kitchen.jpg" alt="Modern kitchen interior" />
+              <figcaption>Updated single-family home</figcaption>
+            </figure>
+            <figure>
+              <img src="/home-stairs.jpg" alt="Open staircase and entry" />
+              <figcaption>Multi-level townhome</figcaption>
+            </figure>
+            <figure>
+              <img src="/home-dining.jpg" alt="Bright dining room" />
+              <figcaption>Light-filled family home</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Process band ───────────────────────── */}
+      <section className="section">
+        <div className="wrap split">
+          <img src="/closing.jpg" alt="Signing the closing paperwork" />
+          <div>
+            <div className="eyebrow">Selling made simple</div>
+            <h2>A straightforward, no-pressure close</h2>
+            <p className="lead">
+              No banks, no appraisals, no last-minute surprises. We handle the paperwork
+              and you choose the closing date.
+            </p>
+            <ul>
+              <li>A fair, written cash offer within 24 hours</li>
+              <li>We cover all standard closing costs</li>
+              <li>Close in as little as 7 days, or on your timeline</li>
+              <li>Zero commissions and no obligation to accept</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* ── Compare ────────────────────────────── */}
       <section className="section" id="compare">
         <div className="wrap">
@@ -173,12 +221,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Service area ───────────────────────── */}
-      <section className="section tight">
+      {/* ── Service area + map ─────────────────── */}
+      <section className="section tight" id="area">
         <div className="wrap">
           <div className="center mb-lg">
             <div className="eyebrow">Where we buy</div>
             <h2>Serving homeowners across California</h2>
+            <p className="lead center">
+              Headquartered in Newport Beach, buying homes throughout the state.
+            </p>
+          </div>
+          <div className="map-frame mb-lg">
+            <iframe
+              title="Arete Homes service area"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&z=11&output=embed`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
           <div className="tags" style={{ justifyContent: "center", maxWidth: 760, margin: "0 auto" }}>
             {cities.map((c) => (
@@ -251,7 +310,7 @@ export default function Home() {
               <h4>Contact</h4>
               <a href={site.phoneHref}>{site.phone}</a>
               <a href={`mailto:${site.email}`}>{site.email}</a>
-              <span style={{ display: "block", paddingTop: 8, fontSize: 14 }}>{site.city}</span>
+              <span style={{ display: "block", paddingTop: 8, fontSize: 14, maxWidth: 220 }}>{site.address}</span>
             </div>
           </div>
           <div className="legal">
