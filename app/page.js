@@ -60,19 +60,33 @@ export default function Home() {
       <section className="section tight">
         <div className="wrap grid3">
           <div className="feature">
-            <div className="ic">🔧</div>
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14.5 5.5a3.5 3.5 0 0 1-4.7 4.7L4 16l4 4 5.8-5.8a3.5 3.5 0 0 0 4.7-4.7l-2.3 2.3-2-2 2.3-2.3z" />
+              </svg>
+            </div>
             <h3>No repairs needed</h3>
             <p>Leave the house exactly as it is. We handle every fix after closing.</p>
           </div>
           <div className="feature">
-            <div className="ic">💸</div>
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20.6 12.4 12 21l-8.6-8.6A3 3 0 0 1 2.5 10V5a2.5 2.5 0 0 1 2.5-2.5h5a3 3 0 0 1 2 .9l8.6 8.6a1.4 1.4 0 0 1 0 2z" />
+                <circle cx="7.5" cy="7.5" r="1.2" />
+              </svg>
+            </div>
             <h3>No hidden fees</h3>
             <p>The offer we give you is the cash you keep. No commissions, no surprises.</p>
           </div>
           <div className="feature">
-            <div className="ic">⚡</div>
-            <h3>Fast &amp; simple</h3>
-            <p>Close in days, not months — and pick the date that fits your life.</p>
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="13" r="8" />
+                <path d="M12 9v4l2.5 1.5M9 2h6" />
+              </svg>
+            </div>
+            <h3>Fast and simple</h3>
+            <p>Close in days, not months, and pick the date that fits your life.</p>
           </div>
         </div>
       </section>
@@ -203,7 +217,7 @@ export default function Home() {
         <div className="wrap">
           <div className="band">
             <h2>Ready for an honest cash offer?</h2>
-            <p>Thousands of California homeowners have sold quickly and stress-free. You can too.</p>
+            <p>Tell us about your property and we&apos;ll get you a number. No pressure, no obligation.</p>
             <div className="hero-cta" style={{ justifyContent: "center" }}>
               <a className="btn btn-primary" href="#offer">Get my cash offer</a>
               <a className="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
@@ -242,7 +256,7 @@ export default function Home() {
           </div>
           <div className="legal">
             <span>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</span>
-            <span>Not a licensed real estate brokerage. This is a demo site.</span>
+            <span>{site.city} · Cash home buyers</span>
           </div>
         </div>
       </footer>

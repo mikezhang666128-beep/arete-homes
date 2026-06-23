@@ -44,7 +44,7 @@ export default function LeadForm({ id }) {
     return (
       <div className="card" id={id}>
         <div className="success">
-          <h3>Request received 🎉</h3>
+          <h3>Request received</h3>
           <p className="sub" style={{ marginBottom: 0 }}>
             Thanks{form.name ? `, ${form.name.split(" ")[0]}` : ""}! We&apos;ll review your
             property and reach out within 24 hours with a no-obligation cash offer.
@@ -112,7 +112,7 @@ export default function LeadForm({ id }) {
           Something went wrong. Please call us at {site.phone}.
         </p>
       )}
-      <p className="form-note">🔒 Your information is private and never sold.</p>
+      <p className="form-note">Your information is private and never sold.</p>
     </form>
   );
 }
