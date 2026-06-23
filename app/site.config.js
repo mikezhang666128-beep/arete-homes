@@ -14,7 +14,7 @@ export const site = {
   // Lead delivery via Web3Forms — free, no account, emails each lead to your inbox.
   // Get a key in 30s at https://web3forms.com using team.aretehomes@gmail.com,
   // then paste it between the quotes below. No database or backend required.
-  web3formsKey: "",
+  web3formsKey: "6f4a08cb-ac39-4698-9ffc-2319cfa5f7a4",
 };
 
 export const cities = [
