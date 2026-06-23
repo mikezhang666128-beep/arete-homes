@@ -58,7 +58,7 @@ h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 14px; }
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: 0.22em; font-size: 18px; }
-.brand img { width: 34px; height: 34px; }
+.brand img { width: 36px; height: auto; display: block; }
 .nav-links { display: flex; gap: 30px; align-items: center; }
 .nav-links a { color: var(--muted); font-size: 15px; font-weight: 500; }
 .nav-links a:hover { color: var(--text); }

@@ -10,7 +10,7 @@ export const metadata = {
       "Sell your California home for 100% cash. No repairs, no commissions, no hidden fees. Close in as little as 7 days.",
     type: "website",
   },
-  icons: { icon: "/logo.svg" },
+  icons: { icon: "/logo.png" },
 };
 
 export default function RootLayout({ children }) {

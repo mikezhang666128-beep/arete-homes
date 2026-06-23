@@ -8,7 +8,7 @@ export default function Home() {
       <header className="header">
         <div className="wrap nav">
           <a className="brand" href="#top">
-            <img src="/logo.svg" alt="" />
+            <img src="/logo.png" alt="Arete" />
             ARETE
           </a>
           <nav className="nav-links">
@@ -232,7 +232,7 @@ export default function Home() {
           <div className="footer-grid">
             <div>
               <a className="brand" href="#top" style={{ marginBottom: 14 }}>
-                <img src="/logo.svg" alt="" />
+                <img src="/logo.png" alt="Arete" />
                 ARETE
               </a>
               <p style={{ maxWidth: 320, fontSize: 15 }}>
